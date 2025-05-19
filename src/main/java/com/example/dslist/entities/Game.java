@@ -22,7 +22,11 @@ public class Game {
     private String platforms;
     private Double score;
     private String imgUrl;
+
+    @Column(columnDefinition = "TEXT") 
     private String shortDescription;
+
+    @Column(columnDefinition = "TEXT") //JPA gera o campo como texto e nao como varchar de no max 255 caracteres
     private String longDescription;
 
     public Game () {
